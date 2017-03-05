@@ -13,8 +13,8 @@ android {
         applicationId "mobi.tarantino.stub.auto"
         minSdkVersion 21
         targetSdkVersion 25
-        versionCode 35
-        versionName "0.30"
+        versionCode 1
+        versionName "0.001"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         buildConfigField "boolean", "USE_CRASHLYTICS", "true"
