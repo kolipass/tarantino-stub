@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:drawable="@drawable/demo_tour_1"
+                 tools:ignore="NewApi">
+    <target
+        android:name="human"
+        android:animation="@animator/human_animator"/>
+    <target
+        android:name="gasoline_gun"
+        android:animation="@animator/gasoline_gun_animator"/>
+    <target
+        android:name="pedestrian"
+        android:animation="@animator/pedestrian_animator"/>
+
+</animated-vector>

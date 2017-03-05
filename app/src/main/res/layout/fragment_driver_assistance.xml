@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey_light"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/text_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical|left|start"
+        android:minHeight="?android:actionBarSize"
+        android:paddingBottom="@dimen/margin_12"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="@dimen/margin_12"
+        android:text="@string/help"
+        android:textColor="@color/black"/>
+
+    <include layout="@layout/toolbar_shadow"/>
+
+
+    <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        app:amount="5"
+        app:duration="250"
+        app:endColor="@color/yellowish_orange"
+        app:startColor="@color/grey_light"/>
+
+    <include
+        layout="@layout/layout_error_retry"
+        android:visibility="gone"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/phones_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            tools:listitem="@layout/drivers_assistance_info_item"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

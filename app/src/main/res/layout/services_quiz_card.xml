@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mobi.tarantino.stub.auto.feature.dashboard.services.quizCard.QuizCardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                                             xmlns:tools="http://schemas.android.com/tools"
+                                                                             android:layout_width="match_parent"
+                                                                             android:layout_height="wrap_content"
+                                                                             android:animateLayoutChanges="true">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        app:srcCompat="@drawable/ic_lamp_grey_36"
+                        tools:ignore="ContentDescription"/>
+
+                    <TextView
+                        android:id="@+id/info_textView"
+                        style="@style/text_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/your_opinion"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grey_soft"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_quiz_card"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="8dp"
+                        android:indeterminate="true"/>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/update_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@string/retry"
+                    android:tint="@color/yellowish_orange"
+                    app:srcCompat="@drawable/ic_update_24dp"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/card_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextSwitcher
+                    android:id="@+id/quiz_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"/>
+
+                <LinearLayout
+                    android:id="@+id/quiz_controls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/dislike_button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/ic_dislike"
+                        tools:ignore="ContentDescription"/>
+
+                    <ImageView
+                        android:id="@+id/like_button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="32dp"
+                        app:srcCompat="@drawable/ic_like"
+                        tools:ignore="ContentDescription"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/layout_error_retry"
+                tools:visibility="gone"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</mobi.tarantino.stub.auto.feature.dashboard.services.quizCard.QuizCardLayout>

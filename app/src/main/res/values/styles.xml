@@ -1,0 +1,106 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/grey_soft</item>
+        <item name="colorPrimaryDark">@color/grey_soft</item>
+        <item name="colorAccent">@color/grey_soft</item>
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+    <style name="DashBoardTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorAccent">@color/grey_soft</item>
+
+        <item name="android:actionModeBackground">@color/coral</item>
+
+        <item name="actionModeStyle">@style/ActionMode</item>
+        <item name="android:actionModeStyle">@style/ActionMode</item>
+    </style>
+
+    <style name="ActionMode" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="actionModeCloseButtonStyle">@style/Widget.AppCompat.ActionButton.CloseMode
+        </item>
+        <item name="titleTextStyle">@style/ActionMode.Title</item>
+        <item name="subtitleTextStyle">@style/ActionMode.Subtitle</item>
+        <item name="android:titleTextStyle">@style/ActionMode.Title</item>
+        <item name="android:subtitleTextStyle">@style/ActionMode.Subtitle</item>
+        <item name="background">@color/coral</item>
+        <item name="android:background">@color/coral</item>
+        <item name="actionModeBackground">@color/coral</item>
+        <item name="android:actionModeBackground">@color/coral</item>
+    </style>
+
+    <style name="ActionMode.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@color/button_white_transparent_text_colors</item>
+    </style>
+
+    <style name="ActionMode.Subtitle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle">
+        <item name="android:textColor">@color/button_white_transparent_text_colors</item>
+    </style>
+
+    <style name="myclosebutton" parent="Widget.AppCompat.ActionButton.CloseMode">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/mint</item>
+        <item name="colorAccent">@color/mintAccent</item>
+    </style>
+
+    <style name="OrangeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/yellowish_orange</item>
+        <item name="colorAccent">@color/yellowish_orange</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="text_small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="text_medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="text_18_regular">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="text_large">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="text_large_extra">
+        <item name="android:textSize">42sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="text_large_light_32sp">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="text_large_36sp">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:drawable="@drawable/demo_tour_2"
+                 tools:ignore="NewApi">
+    <target
+        android:name="car"
+        android:animation="@animator/car_in_animator"/>
+    <target
+        android:name="discount"
+        android:animation="@animator/discount_in_animator"/>
+
+</animated-vector>

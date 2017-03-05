@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/yellowish_orange</color>
+    <color name="colorPrimaryDark">#ff9800</color>
+    <color name="colorAccent">#59000000</color>
+
+    <color name="yellowish_orange">#ff9e16</color>
+    <color name="yellow_dark">#e68e13</color>
+    <color name="bg_gray">#f8f7f5</color>
+
+    <color name="grey_soft">#ababab</color>
+    <color name="black_soft">#26000000</color>
+    <color name="coral">#f25656</color>
+    <color name="pink">#f25656</color>
+    <color name="white_alpha07">#b2ffffff</color>
+    <color name="mint">#64c78a</color>
+    <color name="mintAccent">#5AB37C</color>
+    <color name="orange_alpha07">#b2ff9e16</color>
+    <color name="grey_strong">#383f4a</color>
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="green">#30a141</color>
+    <color name="grey_light">#f8f7f5</color>
+
+</resources>

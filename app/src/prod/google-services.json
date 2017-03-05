@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "763579103558",
+    "project_id": "mobi-auto-android"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763579103558:android:ddd7d2c52e086847",
+        "android_client_info": {
+          "package_name": "mobi.tarantino.stub.auto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763579103558-hv1oc8bvppe4ccratnmngal9s5pdqoc4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mobi.tarantino.stub.auto",
+            "certificate_hash": "6D15EC39CFC78606BA25BE868FD512665ADE5128"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA77KTgaHkil_6WZWJs-mNOWUoJh6xaT7E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-333333-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

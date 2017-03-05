@@ -1,0 +1,120 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".feature.auth.AuthActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                app:amount="5"
+                app:endColor="@color/yellowish_orange"
+                app:startColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/info_textView"
+                style="@style/text_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_code_from_sms"
+                android:textColor="@color/yellowish_orange"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.alimuzaffar.lib.pin.PinEntryEditText
+                    android:id="@+id/code"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:inputType="phone"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/margin_4"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp"
+                    android:visibility="visible"
+                    app:pinCharacterSpacing="@dimen/margin_12"
+                    app:pinLineColors="@color/pin_line_colors"
+                    app:pinLineStroke="@dimen/margin_4"
+                    app:pinLineStrokeSelected="@dimen/margin_4"
+                    app:pinTextBottomPadding="@dimen/margin_12"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/send_sms_to_textView"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@android:drawable/list_selector_background"
+                android:linksClickable="true"
+                android:text="@string/label_send_sms_to"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/send_sms_again_textView"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@android:drawable/list_selector_background"
+                android:clickable="true"
+                android:linksClickable="true"
+                android:text="@string/label_send_sms_again"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/send_sms_again_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_orange_border_transparent"
+                android:padding="16dp"
+                android:text="@string/action_send_sms"
+                android:textColor="@color/button_orange_transparent_text_colors"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Login progress -->
+</ScrollView>

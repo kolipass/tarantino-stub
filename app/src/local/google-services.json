@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "89809486318",
+    "firebase_url": "https://mobiauto.firebaseio.com",
+    "project_id": "mobiauto",
+    "storage_bucket": "mobiauto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89809486318:android:ddd7d2c52e086847",
+        "android_client_info": {
+          "package_name": "mobi.tarantino.stub.auto.local"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89809486318-3t2ih7lb3kib4kohddsfi1e7spo3cv7o.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "89809486318-recqe8l787god31du7ui336dg07jjfrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRj3oNQhL_uuGh42xrxm1KtWIqIYOzDI0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

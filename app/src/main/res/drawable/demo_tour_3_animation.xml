@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:drawable="@drawable/demo_tour_3"
+                 tools:ignore="NewApi">
+    <target
+        android:name="osago"
+        android:animation="@animator/phone_card_in_delay_animator"/>
+    <target
+        android:name="parking"
+        android:animation="@animator/phone_card_in_animator"/>
+</animated-vector>

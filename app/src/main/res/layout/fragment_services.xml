@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mobi.tarantino.stub.auto.commonView.NotifiedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/services_notification_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <include
+            layout="@layout/services_changes_in_traffic_laws_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/services_fuel_info_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/services_driver_assistance_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            layout="@layout/services_quiz_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</mobi.tarantino.stub.auto.commonView.NotifiedScrollView>
