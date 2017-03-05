@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mobi.tarantino.stub.auto.feature.dashboard.services.driverAssistance.DriverAssistanceLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/ic_driver_assistance_grey_36" />
+
+            <TextView
+                android:id="@+id/info_textView"
+                style="@style/text_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/driver_assistance"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_soft" />
+        </LinearLayout>
+
+        <include layout="@layout/divider" />
+
+        <RelativeLayout
+            android:id="@+id/phone_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white_orange"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/caption_emergency"
+                style="@style/text_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/phone_imageView"
+                android:text="@string/emergency"
+                android:textColor="@color/grey_soft" />
+
+            <TextView
+                android:id="@+id/emergency_phone_textView"
+                style="@style/text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/caption_emergency"
+                android:layout_toLeftOf="@+id/phone_imageView"
+                android:text="@string/common_emergency_phone"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/phone_imageView"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_phone" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/divider" />
+
+        <Button
+            android:id="@+id/other_phones_button"
+            style="@style/text_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_orange_border_transparent"
+            android:text="@string/other_phones"
+            android:textColor="@color/button_orange_border_transparent_text_colors" />
+    </LinearLayout>
+
+</mobi.tarantino.stub.auto.feature.dashboard.services.driverAssistance.DriverAssistanceLayout>
