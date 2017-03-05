@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rouble">&#8381;</string>
+    <string name="finesMoneyCount">%d &#8381;</string>
+    <string name="moneyWithRouble">%s &#8381;</string>
+
+    <string name="pay_with_rouble">Оплатить %s &#8381;</string>
+    <string name="fuelPrice">%.2f &#8381;</string>
+    <string name="taxCount">Комиссия %1$s, минимум %2$s  &#8381;</string>
+</resources>

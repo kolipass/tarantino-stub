@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/add_car_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_12"
+        android:background="@drawable/button_orange_border_transparent"
+        android:minWidth="200dp"
+        android:padding="@dimen/margin_12"
+        android:text="@string/add_car"
+        android:textColor="@color/button_orange_border_transparent_text_colors" />
+
+    <Button
+        android:id="@+id/add_driver_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_12"
+        android:background="@drawable/button_orange_border_transparent"
+        android:minWidth="200dp"
+        android:padding="@dimen/margin_12"
+        android:text="@string/add_driver"
+        android:textColor="@color/button_orange_border_transparent_text_colors" />
+</LinearLayout>

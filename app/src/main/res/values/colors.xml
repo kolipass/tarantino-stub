@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/yellowish_orange</color>
+    <color name="colorPrimaryDark">#ff9800</color>
+    <color name="colorAccent">#59000000</color>
+
+    <color name="yellowish_orange">#ff9e16</color>
+    <color name="yellow_dark">#e68e13</color>
+    <color name="bg_gray">#f8f7f5</color>
+
+    <color name="grey_soft">#ababab</color>
+    <color name="black_soft">#26000000</color>
+    <color name="black_soft2">#66000000</color>
+    <color name="coral">#f25656</color>
+    <color name="grey_shadow">#ca8f8f8f</color>
+    <color name="grey_soft_alpha07">#9aababab</color>
+    <color name="pink">#f25656</color>
+    <color name="white_alpha07">#b2ffffff</color>
+    <color name="mint">#64c78a</color>
+    <color name="mintAccent">#5AB37C</color>
+    <color name="orange_alpha07">#b2ff9e16</color>
+    <color name="grey_strong">#383f4a</color>
+    <color name="grey_strong_alpha07">#81383f4a</color>
+    <color name="grey_strong_alpha33">#55383f4a</color>
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="white_semi_transparent">#4c000000</color>
+    <color name="white_14_transparent">#14000000</color>
+    <color name="black_alpha02">#66000000</color>
+    <color name="green">#30a141</color>
+    <color name="grey_light">#f8f7f5</color>
+    <color name="orange_alpha05">#85ff9e16</color>
+    <color name="orange_alpha02">#2cff9e16</color>
+    <color name="red">#ff0000</color>
+
+    <array name="random_color">
+        <item>#ffbc29</item>
+        <item>#dfbc8a</item>
+        <item>#72c063</item>
+        <item>#7dd6dc</item>
+        <item>#53a3da</item>
+        <item>#7684ff</item>
+        <item>#bf57f2</item>
+        <item>#f46e6e</item>
+        <item>#ad7e5e</item>
+        <item>#f593dc</item>
+    </array>
+</resources>

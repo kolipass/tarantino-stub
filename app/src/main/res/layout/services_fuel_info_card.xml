@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mobi.tarantino.stub.auto.feature.dashboard.services.fuelInfoCard.FuelInfoCardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fuel_info_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <android.support.v7.widget.CardView
+
+        android:id="@+id/fuel_info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey_strong"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/update_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|top"
+            android:layout_margin="16dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_update_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:srcCompat="@drawable/ic_fuel_white_36" />
+
+                <TextView
+                    android:id="@+id/info_textView"
+                    style="@style/text_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    tools:text="топливо в москве" />
+
+                <ProgressBar
+                    android:id="@+id/progress_fuel_card"
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:indeterminate="true" />/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/card_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabGravity="center"
+                    app:tabIndicatorColor="@color/colorPrimaryDark"
+                    app:tabSelectedTextColor="@color/colorPrimaryDark"
+                    app:tabTextColor="@color/grey_soft">
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/tab_ai92"
+                        android:layout_width="100dp"
+                        android:layout_height="46dp"
+                        android:text="@string/ai92" />
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/tab_ai95"
+                        android:layout_width="100dp"
+                        android:layout_height="46dp"
+                        android:text="@string/ai95" />
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/tab_ai98"
+                        android:layout_width="100dp"
+                        android:layout_height="46dp"
+                        android:text="@string/ai98" />
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/tab_diesel"
+                        android:layout_width="100dp"
+                        android:layout_height="46dp"
+                        android:text="@string/diesel" />
+                </android.support.design.widget.TabLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fuel_info_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="246dp"
+                    android:background="@color/colorAccent"
+                    tools:listitem="@layout/services_fuel_info_card_list_item" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/layout_error_retry"
+                tools:visibility="gone" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</mobi.tarantino.stub.auto.feature.dashboard.services.fuelInfoCard.FuelInfoCardLayout>

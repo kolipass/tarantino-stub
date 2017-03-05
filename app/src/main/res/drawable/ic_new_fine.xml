@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22.626329dp"
+    android:height="21.777945dp"
+    android:viewportHeight="21.77794"
+    android:viewportWidth="22.62633">
+    <group
+        android:scaleX="1.25"
+        android:scaleY="-1.25"
+        android:translateX="30.44395"
+        android:translateY="52.35825">
+        <path
+            android:pathData="M-16.007246 40.737366c0.387965 0.732815 1.017505 0.731809 1.404935 0l7.595065 -14.346241c0.387965 -0.732815 0.0297 -1.32688 -0.80124 -1.32688l-14.992582 0c-0.830476 0 -1.188672 0.59507 -0.801244 1.32688l7.595066 14.346241z"
+            android:strokeColor="@color/grey_soft"
+            android:strokeLineCap="butt"
+            android:strokeLineJoin="miter"
+            android:strokeMiterLimit="10"
+            android:strokeWidth="1.5" />
+        <group
+            android:translateX="-25.30135"
+            android:translateY="23.40513">
+            <group
+                android:scaleX="0.8"
+                android:scaleY="-0.8"
+                android:translateY="20">
+                <path
+                    android:fillAlpha="0.99"
+                    android:fillColor="@color/grey_soft"
+                    android:pathData="M12.494141 8.109375a1.1940433 1.0484283 0 0 0 -1.195313 1.046875 1.1940433 1.0484283 0 0 0 0.05273 0.3007812l0.441407 5.8906248 0.002 0a0.70571616 0.81544489 0 0 0 -0.0059 0.0957 0.70571616 0.81544489 0 0 0 0.707032 0.816407 0.70571616 0.81544489 0 0 0 0.705078 -0.816407 0.70571616 0.81544489 0 0 0 -0.0098 -0.138671l0.44925 -5.8593725A1.1940433 1.0484283 0 0 0 13.6875 9.15625 1.1940433 1.0484283 0 0 0 12.494141 8.109375Z"
+                    android:strokeMiterLimit="6" />
+            </group>
+            <group android:scaleY="-1">
+                <path
+                    android:fillAlpha="0.99"
+                    android:fillColor="@color/grey_soft"
+                    android:pathData="M10.960155 -5.01162A0.96343297 0.96343297 0 0 1 9.9967222 -4.0481871 0.96343297 0.96343297 0 0 1 9.0332893 -5.01162 0.96343297 0.96343297 0 0 1 9.9967222 -5.975053 0.96343297 0.96343297 0 0 1 10.960155 -5.01162Z"
+                    android:strokeMiterLimit="6" />
+            </group>
+        </group>
+    </group>
+</vector>

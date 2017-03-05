@@ -1,0 +1,187 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
+apply from: '../config/quality/quality.gradle'
+apply plugin: 'com.neenbedankt.android-apt'
+
+apply plugin: 'com.jakewharton.hugo'
+
+
+
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "mobi.tarantino.stub.auto"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 35
+        versionName "0.30"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+        buildConfigField "boolean", "FINES_MULTIPAYMENT", "false"
+        buildConfigField "String", "AUTH_API", "\"https://tarantino.mobi/auth/\""
+
+        buildConfigField "String", "CLIENT_ID", "\"client-id\""
+        buildConfigField "String", "CLIENT_SECRET", "\"CLIENT_SECRET\""
+
+        buildConfigField "String", "PAYMENT_API", "\"https://tarantino.mobi/api/\""
+        buildConfigField "String", "ADDITIONAL_DATA_API", "\"https://auto.tarantino.mobi/\"";
+        buildConfigField "String", "TRAFFIC_FINES_API", "\"https://edge.tarantino.mobi/traffic-fines/\"";
+
+        buildConfigField "String", "X_APPLICATION_SECRET", "\"X_APPLICATION_SECRET\"";
+
+        renderscriptTargetApi 16
+        renderscriptSupportModeEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        local {
+            multiDexEnabled true
+            minSdkVersion 21
+
+            applicationIdSuffix ".local"
+        }
+        prod {
+            buildConfigField "String", "AUTH_API", "\"https://w.tarantino.mobi/\"";
+            buildConfigField "String", "PAYMENT_API", "\"https://tarantino.mobi/api/\""
+            buildConfigField "String", "X_APPLICATION_SECRET", "\"66f8109f-d6df-49c6-ade9-5692a0b6d0a1\"";
+
+        }
+
+    }
+
+    sourceSets {
+        def commonTestDir = 'src/commonTest/java'
+        test {
+            java.srcDir commonTestDir
+        }
+        androidTest {
+            java.srcDir commonTestDir
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    final SUPPORT_LIBRARY_VERSION = '25.2.0'
+    final RETROFIT_VERSION = '2.1.0'
+    final OKHTTP_VERSION = '3.6.0'
+    final DAGGER_VERSION = '2.9'
+    final BUTTERKNIFE_VERSION = '8.5.1'
+    final MOCKITO_VERSION = '1.10.19'
+    final POWERMOCK_VERSION = '1.6.6'
+    final ESPRESSO_VERSION = '2.2.2'
+    final JUNIT_VERSION = '4.12'
+    final ROBOLECTRIC_VERSION = '3.3'
+    final RUNNER_VERSION = '0.5'
+    final DEXMAKER_VERSION = '1.4'
+    final ORM_LITE_VERSION = '5.0'
+    final GMS_VERSION = '10.2.0'
+    final LEAKCANARY_VERSION = '1.5'
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
+    compile "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
+    compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
+
+    compile "com.google.android.gms:play-services-location:$GMS_VERSION"
+    compile "com.google.android.gms:play-services-analytics:$GMS_VERSION"
+    compile "com.google.android.gms:play-services-gcm:$GMS_VERSION"
+    compile "com.google.firebase:firebase-appindexing:$GMS_VERSION"
+
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
+    compile 'com.hannesdorfmann.mosby:viewstate:2.0.1'
+
+    compile "com.google.dagger:dagger:$DAGGER_VERSION"
+    apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+
+    compile "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
+    apt "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
+
+    compile "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION"
+    compile "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    compile "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    compile("com.squareup.retrofit2:converter-simplexml:$RETROFIT_VERSION") {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    compile "com.squareup.retrofit2:adapter-rxjava:$RETROFIT_VERSION"
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.github.pinball83:masked-edittext:1.0.3'
+
+    compile 'io.reactivex:rxjava:1.2.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.1@aar'
+
+    compile 'com.alimuzaffar.lib:pinentryedittext:1.3.1'
+
+    compile 'me.relex:circleindicator:1.2.2@aar'
+
+    compile 'io.karim:materialtabs:2.0.5'
+
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    compile('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.10.3@aar') {
+        transitive = true
+    }
+    compile 'com.github.silvestrpredko:dot-progress-bar:1.1@aar'
+
+    compile "com.j256.ormlite:ormlite-core:$ORM_LITE_VERSION"
+    compile "com.j256.ormlite:ormlite-android:$ORM_LITE_VERSION"
+    //A library for debugging android databases and shared preferences
+    debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
+
+    localCompile "com.squareup.leakcanary:leakcanary-android:$LEAKCANARY_VERSION"
+    prodCompile "com.squareup.leakcanary:leakcanary-android-no-op:$LEAKCANARY_VERSION"
+
+    testCompile "junit:junit:$JUNIT_VERSION"
+    testCompile "org.mockito:mockito-core:$MOCKITO_VERSION"
+    testCompile("org.robolectric:robolectric:$ROBOLECTRIC_VERSION") {
+        exclude group: 'commons-logging', module: 'commons-logging'
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    testCompile "org.robolectric:shadows-support-v4:$ROBOLECTRIC_VERSION"
+    testApt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    testCompile group: 'org.powermock', name: 'powermock-api-mockito', version: POWERMOCK_VERSION
+    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version: POWERMOCK_VERSION
+
+    testCompile "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION"
+    testCompile "com.squareup.retrofit2:retrofit-mock:$RETROFIT_VERSION"
+
+    testCompile "com.squareup.leakcanary:leakcanary-android-no-op:$LEAKCANARY_VERSION"
+
+    androidTestCompile "com.android.support.test:runner:$RUNNER_VERSION"
+    // Set this dependency to use JUnit 4 rules
+    androidTestCompile "com.android.support.test:rules:$RUNNER_VERSION"
+    // Set this dependency to build and run Espresso tests
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$ESPRESSO_VERSION", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestCompile "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
+    androidTestCompile "org.mockito:mockito-core:$MOCKITO_VERSION"
+    androidTestCompile "com.crittercism.dexmaker:dexmaker:$DEXMAKER_VERSION"
+    androidTestCompile "com.crittercism.dexmaker:dexmaker-dx:$DEXMAKER_VERSION"
+    androidTestCompile "com.crittercism.dexmaker:dexmaker-mockito:$DEXMAKER_VERSION"
+    androidTestApt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    compile 'org.jetbrains:annotations-java5:15.0'
+}
+
+apply plugin: 'com.google.gms.google-services'
